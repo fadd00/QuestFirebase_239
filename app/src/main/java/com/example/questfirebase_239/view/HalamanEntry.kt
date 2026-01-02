@@ -25,7 +25,10 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.questfirebase_239.R
 import com.example.questfirebase_239.modeldata.DetailSiswa
+import com.example.questfirebase_239.modeldata.UIStateSiswa
 import com.example.questfirebase_239.view.route.DestinasiEntry
+import com.example.questfirebase_239.viewmodel.EntryViewModel
+import com.example.questfirebase_239.viewmodel.PenyediaViewModel
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -67,10 +70,10 @@ fun EntrySiswaScreen(
 
 @Composable
 fun EntrySiswaBody(
-        uiStateSiswa: UIStateSiswa,
-        onSiswaValueChange: (DetailSiswa) -> Unit,
-        onSaveClick: () -> Unit,
-        modifier: Modifier = Modifier
+    uiStateSiswa: UIStateSiswa,
+    onSiswaValueChange: (DetailSiswa) -> Unit,
+    onSaveClick: () -> Unit,
+    modifier: Modifier = Modifier
 ) {
     Column(
             verticalArrangement =
