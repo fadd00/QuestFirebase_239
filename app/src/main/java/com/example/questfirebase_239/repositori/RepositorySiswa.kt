@@ -33,7 +33,7 @@ class FirebaseRepositorySiswa : RepositorySiswa {
                 else collection.document(siswa.id.toString())
         val data =
                 hashMapOf(
-                        "id" to (siswa.id.takeIf { it != 0L } ?: docRef.id.hashCode()),
+                        "id" to (siswa.id.takeIf { it != 0L } ?: System.currentTimeMillis()),
                         "nama" to siswa.nama,
                         "alamat" to siswa.alamat,
                         "telpon" to siswa.telpon
